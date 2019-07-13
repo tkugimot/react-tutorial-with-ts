@@ -6,11 +6,15 @@ interface SquarePropsInterface {
     value: number;
 }
 
-class Square extends React.Component<SquarePropsInterface> {
+interface SquareStateInterface {
+    value: string;
+}
+
+class Square extends React.Component<SquarePropsInterface, SquareStateInterface> {
     constructor(props: SquarePropsInterface) {
         super(props);
         this.state = {
-            value: null,
+            value: "",
         };
     }
 
