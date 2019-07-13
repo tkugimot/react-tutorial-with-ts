@@ -2,7 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 
-class Square extends React.Component {
+interface SquarePropsInterface {
+    value: number;
+}
+
+class Square extends React.Component<SquarePropsInterface> {
     render() {
         return (
             <button className="square">
